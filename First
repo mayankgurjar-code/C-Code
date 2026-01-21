@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+// Global variable (stored in global/static memory)
+int globalVar = 10;
+
+int main() {
+    // Local variable (stored in stack memory)
+    int localVar = 20;
+
+    // Dynamically allocated variable (stored in heap memory)
+    int* heapVar = new int(30);
+
+    // Printing addresses
+    cout << "Address of global variable: " << &globalVar << endl;
+    cout << "Address of local variable: " << &localVar << endl;
+    cout << "Address of heap variable: " << heapVar << endl;
+
+    // Free heap memory
+    delete heapVar;
+
+    return 0;
