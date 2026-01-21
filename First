@@ -3,7 +3,7 @@ using namespace std;
 int globalVar = 10;
 int main() {
     int localVar = 20;
-    int* heapVar = new int(30);
+    int* heapVar = new int(30); 
 
     // Printing addresses
     cout << "Address of global variable: " << &globalVar << endl;
@@ -11,5 +11,5 @@ int main() {
     cout << "Address of heap variable: " << heapVar << endl;
     // Free heap memory
     delete heapVar;
-
     return 0;
+}
